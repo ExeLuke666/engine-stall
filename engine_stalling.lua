@@ -29,7 +29,7 @@ AddEventHandler("carEngineStalling:stallEngine", StallEngine)
 
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(100) -- Check every 0.1 second
+        Citizen.Wait(100)
         local playerPed = PlayerPedId()
         if playerPed and IsPedInAnyVehicle(playerPed, false) then
             local vehicle = GetVehiclePedIsIn(playerPed, false)
